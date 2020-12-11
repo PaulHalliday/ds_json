@@ -4,7 +4,7 @@ import 'package:flutter_test/flutter_test.dart';
 
 void main() {
   group("Serialisation", () {
-    testWidgets('Contact is serialised to json', (WidgetTester tester) async {
+    test('Contact is serialised to json', () async {
       final actual = Contact(
         name: "Paul",
         dateOfBirth: DateTime(2020, 1, 1),
@@ -20,7 +20,7 @@ void main() {
       expect(actual, matcher);
     });
 
-    testWidgets('Contact is serialised from json', (WidgetTester tester) async {
+    test('Contact is serialised from json', () async {
       final Map<String, dynamic> json = {
         "name": "Paul",
         "dateOfBirth": "2020-01-01T00:00:00.000",
